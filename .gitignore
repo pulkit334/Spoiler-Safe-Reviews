@@ -1,21 +1,25 @@
-# ignore everything first
-*
-!.gitignore
-!server/
+# root ignores
+node_modules
+.env
+.env.*
 
-# inside server, ignore node stuff
+# server
 server/node_modules
 server/.env
 
-node_modules/
-.env
-.DS_Store
+# client
+client/node_modules
+client/.env
+client/.env.*
+
+# frontend build output (Vite)
+client/dist
+
+# frontend build output (CRA)
 client/build
+
+# misc
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.vscode/
-.idea/
-*.swp
-*.swo
-dist/
